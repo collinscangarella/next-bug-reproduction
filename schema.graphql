@@ -1,0 +1,38 @@
+# GraphQL Schema
+
+# SCALAR types
+scalar DateTime
+
+# ENUM types
+
+# OBJECT types
+
+type Business {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  users: [User!]!
+}
+
+type User {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  email: String!
+}
+
+# INPUT types
+
+# QUERY and MUTATION types
+type Query {
+  listUsers: [User!]!
+}
+
+# type Mutation {
+# }
+
+schema {
+  query: Query
+  # mutation: Mutation
+}
